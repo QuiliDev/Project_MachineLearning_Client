@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quilidev_proyecto_final_ml"
+version = "0.1.0"
+description = "Proyecto de ML para predecir disputas en quejas de clientes"
+readme = "README.md"
+authors = [{ name = "Anthony" }]
+requires-python = ">=3.10"
+
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "seaborn>=0.12",
+  "jupyter>=1.0",
+  "ipykernel>=6.25",
+  "streamlit>=1.26",
+  "shap>=0.48",
+  "xgboost>=1.7",
+  "lightgbm>=4.0",
+  "openpyxl>=3.1",
+  "pyarrow>=13.0",
+  "imbalanced-learn>=0.14.0",
+  "pyyaml>=6.0",
+  "plotly>=5.20",
+  "joblib>=1.3",
+  "fastapi[standard]>=0.116.1"
+]
+
+
+[project.scripts]
+ml-quejas = "app.main:run"
+
+[tool.setuptools.packages.find]
+# indicamos explícitamente solo la carpeta que queremos empaquetar
+include = ["app"]
