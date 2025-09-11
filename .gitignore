@@ -12,3 +12,6 @@ venv/
 
 # VSCode
 .vscode/
+
+# Modelos pesados
+models/pesados/
