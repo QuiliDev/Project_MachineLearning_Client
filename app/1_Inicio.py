@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
-from loaders import load_model_cfg, load_features_sample
+from app.loaders import load_model_cfg, load_features_sample
 
 st.set_page_config(page_title="Inicio", page_icon="🏠", layout="centered")
 

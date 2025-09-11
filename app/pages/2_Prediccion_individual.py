@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from loaders import load_model_cfg, load_catalogs, load_features_sample
-from utils import build_feature_row, predict_one, suggest_actions
-from explain import explain_one
+from app.loaders import load_model_cfg, load_catalogs, load_features_sample
+from app.utils import build_feature_row, predict_one, suggest_actions
+from app.explain import explain_one
 
 st.set_page_config(page_title="Predicción individual", page_icon="🧾", layout="centered")
 

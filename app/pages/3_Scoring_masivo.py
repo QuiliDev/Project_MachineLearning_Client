@@ -3,8 +3,8 @@ import time
 import numpy as np
 import pandas as pd
 import streamlit as st
-from loaders import load_model_cfg
-from utils import build_feature_row
+from app.loaders import load_model_cfg
+from app.utils import build_feature_row
 
 st.set_page_config(page_title="Scoring masivo", page_icon="📦", layout="centered")
 
