@@ -3,6 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # añade la RAÍZ del repo
+
+
 from app.loaders import load_model_cfg, load_features_sample
 # ---- Barra lateral
 with st.sidebar:

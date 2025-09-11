@@ -3,6 +3,11 @@ import time
 import numpy as np
 import pandas as pd
 import streamlit as st
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # añade la RAÍZ del repo
+
 from app.loaders import load_model_cfg
 from app.utils import build_feature_row
 
