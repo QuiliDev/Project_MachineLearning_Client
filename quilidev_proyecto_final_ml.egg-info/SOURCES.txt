@@ -2,13 +2,14 @@ README.md
 pyproject.toml
 app/1_Inicio.py
 app/__init__.py
-app/app.py
 app/appv2.py
 app/appv3.py
 app/appv4.py
 app/components.py
 app/explain.py
+app/home.py
 app/loaders.py
+app/main.py
 app/old_app.py
 app/utils.py
 quilidev_proyecto_final_ml.egg-info/PKG-INFO

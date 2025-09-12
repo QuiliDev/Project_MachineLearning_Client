@@ -2,10 +2,12 @@ from datetime import date
 import numpy as np
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # añade la RAÍZ del repo
+#import sys
+#from pathlib import Path
+#sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # añade la RAÍZ del repo
 
 from app.loaders import load_model_cfg, load_catalogs, load_features_sample
 from app.utils import build_feature_row, predict_one, suggest_actions
@@ -149,8 +151,8 @@ if submitted:
 
     with st.expander("📊 KPIs y bandas de riesgo", expanded=False):
             # ===================== 1) GAUGE / VELOCÍMETRO =====================
+            
         try:
-            import plotly.graph_objects as go
 
             band_color = (
                 "#2ecc71" if proba < 0.40 else
@@ -180,7 +182,6 @@ if submitted:
             ))
             st.plotly_chart(fig_gauge, use_container_width=True)
         except Exception:
-            import matplotlib.pyplot as plt
             fig, ax = plt.subplots(figsize=(6, 1.0))
             ax.barh([0], [100], color="#eafaf1")
             ax.barh([0], [30], color="#2ecc71")

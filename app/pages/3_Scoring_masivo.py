@@ -3,6 +3,7 @@ import time
 import numpy as np
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 import sys
 from pathlib import Path
@@ -199,7 +200,6 @@ if up is not None:
     )
     with st.expander("📊 KPIs y bandas de riesgo", expanded=False):
         st.subheader("Distribución de riesgo")
-        import matplotlib.pyplot as plt
         fig2, ax2 = plt.subplots()
         ax2.hist(probs, bins=20)
         ax2.set_xlabel("Probabilidad de disputa")
